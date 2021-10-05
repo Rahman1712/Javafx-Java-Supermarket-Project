@@ -1,0 +1,42 @@
+
+
+.mainFxmlClass {
+-fx-background-color:linear-gradient(to bottom,#1dbbdd44, #93f9b944);
+}
+/*.text-field{
+    -fx-text-fill: darkblue;
+    -fx-text-size:13pt;
+    -jfx-focus-color:royalblue;
+}*/
+.login-button{
+    -fx-background-color: linear-gradient(to bottom,#1dbbdd44,skyblue, #93f9b944);
+}
+.login-button:hover{
+    -fx-background-color: linear-gradient(to bottom,#1dbbdd44,derive(green,20%), #93f9b944);
+}
+.cancel-button{
+    -fx-background-color: linear-gradient(to bottom,#1dbbdd44,skyblue, #93f9b944);
+}
+.cancel-button:hover{
+    -fx-background-color: linear-gradient(to bottom,#1dbbdd44,derive(red,20%), #93f9b944);
+}
+.glyph-icon{
+    /*-fx-fill:linear-gradient(to bottom,#1dbbdd44,violet, #93f9b944);*/
+    -fx-fill:transparent;
+    -fx-stroke: linear-gradient(to bottom,darkblue,darkorchid);
+   
+}
+.check-box .box{
+    -fx-background-color:linear-gradient(to bottom,#34f20fbf,lightyellow, #efff087a);
+    -fx-background-radius: 15;
+    -fx-border-color: linear-gradient(to bottom,darkblue, #efff087a,darkblue);
+    -fx-border-radius: 15;
+}
+.check-box:selected .box{
+    -fx-background-color: linear-gradient(to bottom,#34f20fbf,lightyellow, #efff087a);
+}
+
+
+.check-box:selected .mark{
+    -fx-background-color: green;
+}

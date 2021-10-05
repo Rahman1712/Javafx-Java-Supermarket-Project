@@ -1,0 +1,52 @@
+
+.mainFxmlClass {
+
+}
+.buttoni{
+    -fx-background-color: linear-gradient(from 43.174604234241304% 4.444442022414435% to 45.079363868350075% 86.34920460837228%,
+        #a1a674,
+       #a1a674  11.255941330594728%,
+       #8f8b39 56.55093415491567%,
+       #8e8f60 95.36016642308857%,
+       #8e8f60 100%);
+    -fx-background-radius: 15 0 15 0; /* (lefttop righttop rightdown leftdown)*/
+    
+}
+.buttoni:hover{
+    -fx-background-color: linear-gradient(from 43.174604234241304% 4.444442022414435% to 45.079363868350075% 86.34920460837228%,
+        #74a876,
+       #74a876  11.255941330594728%,
+       #3b943c 56.55093415491567%,
+       #639464 95.36016642308857%,
+       #639464 100%);
+    -fx-background-radius: 0 15 0 15; /* (lefttop righttop rightdown leftdown)*/
+    
+}
+.menu-item {
+    -fx-background-color: skyblue;
+}
+.menu-item:focused{
+    -fx-background-color: darkgray;
+}
+.menu-item:focused .label{
+    -fx-text-fill: blue;
+}
+.context-menu{
+    /*-fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";*/
+    -fx-background-color: black;-fx-background-insets: 0,1,2;
+    -fx-background-radius:4 4 4 4, 0 6 6 6, 0 5 5 5, 0 4 4 4;
+    -fx-padding: 0.33333em 0.0888333em 0.666667em 0.083333em;
+}
+.menu-bar{
+   -fx-background-color:  linear-gradient(to bottom,#1dbbdd44, #FFFFE4);
+}
+.menu-bar .label{
+    -fx-font-size:	12pt;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family:"Segoe UI Light";
+}
+.jfx-hamburger-icon StackPane{
+    -fx-background-color: black;
+    -fx-background-radius:5px;
+}

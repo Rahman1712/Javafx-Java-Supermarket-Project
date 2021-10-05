@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="500.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.workerlist.WorkerListController">
+    <stylesheets>
+        <URL value="@workerlist.css" />
+    </stylesheets>
+     <children>
+      <AnchorPane fx:id="secAnchorPane" layoutX="37.0" layoutY="43.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.29797979797979796" layoutX="163.0" layoutY="130.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFD9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="firstAnchorPaneInSplit" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="250.0" style="-fx-background-color: transparent;" SplitPane.resizableWithParent="false">
+                     <children>
+                        <VBox layoutX="-1.0" layoutY="99.0" prefHeight="398.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <JFXButton fx:id="allButton" onAction="#allButtonAction" prefHeight="37.0" prefWidth="220.0" text="ALL" textFill="#01071d">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="salesmanButton" onAction="#salesManButtonaction" prefHeight="37.0" prefWidth="220.0" text="SALES MAN" textFill="#01071d">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="billerButton" onAction="#billerButtonAction" prefHeight="37.0" prefWidth="220.0" text="BILLER" textFill="#01071d">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="cleaningButton" onAction="#cleaningButtonAction" prefHeight="37.0" prefWidth="220.0" text="CLEANING" textFill="#01071d">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="managerButton" onAction="#managerButtonaction" prefHeight="37.0" prefWidth="220.0" text="MANAGER" textFill="#01071d">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextField fx:id="searchStaffTextField" focusColor="#407da8" labelFloat="true" prefHeight="25.0" prefWidth="226.0" promptText="Search Staff Name" style="-fx-text-fill: #0c80ce;" unFocusColor="#1fa5c0">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="40.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </VBox>
+                        <AnchorPane layoutX="46.0" layoutY="-126.0" prefHeight="100.0" prefWidth="113.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="57.0" layoutY="14.0" prefHeight="20.0" prefWidth="125.0" text="WORKER DETAILS" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <Separator layoutX="3.0" layoutY="104.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="secondAnchorPaneInSplit" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="534.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="432.0" prefWidth="487.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BorderPane layoutX="60.0" layoutY="46.0" prefHeight="428.0" prefWidth="487.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="tableViewDatas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                                          <TableColumn fx:id="colName" prefWidth="75.0" text="NAME" />
+                                          <TableColumn fx:id="colSection" prefWidth="75.0" text="SECTION" />
+                                        <TableColumn fx:id="colMob" prefWidth="75.0" text="MOBILE" />
+                                          <TableColumn fx:id="colEmail" prefWidth="75.0" text="EMAIL" />
+                                        <TableColumn fx:id="colAadhar" prefWidth="79.29339599609375" text="AADHAR" />
+                                          <TableColumn fx:id="colAddress" prefWidth="177.79986572265625" text="ADDRESS" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <AnchorPane prefHeight="51.0" prefWidth="487.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton layoutX="503.0" layoutY="12.0" onAction="#refreshButtonAction" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(to right,#1dbbdd44, #93f9b944); -fx-border-radius: 30;" text="" AnchorPane.rightAnchor="10.0">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#107d2d" glyphName="REFRESH" size="25" />
+                                             </graphic></JFXButton>
+                                       </children></AnchorPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

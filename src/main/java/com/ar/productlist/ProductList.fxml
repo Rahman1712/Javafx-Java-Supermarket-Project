@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.productlist.ProductListController">
+    <stylesheets>
+        <URL value="@productlist.css" />
+    </stylesheets>
+    <children>
+      <AnchorPane fx:id="secAnchorPane" layoutX="37.0" layoutY="43.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.29797979797979796" layoutX="163.0" layoutY="130.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFE4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="firstAnchorPaneInSplit" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="250.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <VBox layoutX="-1.0" layoutY="99.0" prefHeight="398.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <JFXButton fx:id="allButton" onAction="#allButtonAction" prefHeight="61.0" prefWidth="205.0" text="ALL">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </JFXButton>
+                              <HBox alignment="TOP_RIGHT" />
+                              <Pane fx:id="pane" prefHeight="150.0" prefWidth="205.0">
+                                 <children>
+                                    <RadioButton fx:id="radioName" layoutY="33.0" mnemonicParsing="false" text="Search by Name">
+                                       <padding>
+                                          <Insets left="5.0" top="5.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioBarcode" layoutY="59.0" mnemonicParsing="false" text="Search by Barcode">
+                                       <padding>
+                                          <Insets left="5.0" top="5.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <Label layoutX="28.0" layoutY="14.0" prefHeight="17.0" prefWidth="122.0" text="SEARCH PRODUCTS" textFill="#0da31e" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfieldSearch" layoutX="3.0" layoutY="102.0" prefHeight="32.0" prefWidth="196.0" promptText="search " style="-fx-background-color: transparent; -fx-text-fill: #000000; -fx-border-color: #131313;">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <AnchorPane layoutX="46.0" layoutY="-126.0" prefHeight="100.0" prefWidth="113.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="31.0" layoutY="14.0" prefHeight="25.0" prefWidth="153.0" text="PRODUCT DETAILS" textAlignment="JUSTIFY" textFill="#001202">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <Separator layoutX="3.0" layoutY="104.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="secondAnchorPaneInSplit" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="534.0" styleClass="secondanchorpane">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="432.0" prefWidth="487.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BorderPane layoutX="60.0" layoutY="46.0" prefHeight="428.0" prefWidth="487.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="tableViewProducts" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                          <TableColumn fx:id="colBarcode" prefWidth="75.0" text="BARCODE" />
+                                          <TableColumn fx:id="colProductName" prefWidth="75.0" text="PRODUCT NAME" />
+                                          <TableColumn fx:id="colProductQuantity" prefWidth="75.0" text="QUANTITY" />
+                                        <TableColumn fx:id="colMRP" prefWidth="75.0" text="MRP" />
+                                          <TableColumn fx:id="colDiscount" prefWidth="75.0" text="DISCOUNT" />
+                                        <TableColumn fx:id="colPrice" prefWidth="79.29339599609375" text="PRICE" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <contextMenu>
+                                          <ContextMenu fx:id="contextMenu">
+                                            <items>
+                                              <MenuItem fx:id="menuItemEdit" mnemonicParsing="false" onAction="#editProductMenuItemAction" text="Edit Product" />
+                                                <MenuItem fx:id="menuItemView" mnemonicParsing="false" onAction="#viewProductMenuItemAction" text="View Product" />
+                                                <MenuItem fx:id="menuItemDelete" mnemonicParsing="false" onAction="#deleteProductMenuItemAction" text="Delete Product" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <AnchorPane prefHeight="51.0" prefWidth="487.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton layoutX="503.0" layoutY="12.0" onAction="#refreshButtonAction" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(to right,#1dbbdd44, #93f9b944); -fx-border-radius: 30;" text="" AnchorPane.rightAnchor="10.0">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#105722" glyphName="REFRESH" size="25" />
+                                             </graphic></JFXButton>
+                                       </children></AnchorPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

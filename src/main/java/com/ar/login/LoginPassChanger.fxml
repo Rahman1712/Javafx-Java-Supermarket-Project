@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="421.0" prefWidth="381.0" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.login.LoginPassChangerController">
+    <stylesheets>
+        <URL value="@loginpasschanger.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="309.0" prefWidth="381.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="42.0" layoutY="39.0" prefHeight="364.0" prefWidth="381.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIconView fx:id="fontIcon" fill="#c5b8b842" glyphName="LOCK" size="380" wrappingWidth="244.3333740234375">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-20.0" prefHeight="420.0" prefWidth="381.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutY="-4.0" prefHeight="44.0" prefWidth="381.0" text="PASSWORD &amp; USERNAME CHANGING" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#331872" />
+                        <Stop color="#331872" offset="0.24627720504009165" />
+                        <Stop color="#7d3333" offset="0.3908045977011493" />
+                        <Stop color="#286032" offset="0.5509736540664376" />
+                        <Stop color="#331872" offset="0.7241379310344827" />
+                        <Stop color="#331872" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <JFXTextField fx:id="oldPassTextField" labelFloat="true" layoutX="56.0" layoutY="55.0" onAction="#oldPassTextFieldAction" prefHeight="25.0" prefWidth="283.0" promptText="Enter current password" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944); -fx-text-fill: #8e0213; -fx-prompt-text-fill: darkblue;" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="newPassTextField" labelFloat="true" layoutX="56.0" layoutY="180.0" onAction="#newPassTextFieldAction" prefHeight="25.0" prefWidth="283.0" promptText="Enter new password" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944); -fx-text-fill: #8e0213; -fx-prompt-text-fill: darkblue;" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="newPassConfirmTextField" labelFloat="true" layoutX="56.0" layoutY="250.0" onAction="#newPassConfirmTextFieldAction" prefHeight="25.0" prefWidth="283.0" promptText="Confirm new password" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944); -fx-text-fill: #8e0213; -fx-prompt-text-fill: darkblue;" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <HBox alignment="CENTER" layoutY="355.0" prefHeight="44.0" prefWidth="244.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="okButton" onAction="#okButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" text="ok">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#331872" />
+                              <Stop color="#331872" offset="0.24627720504009165" />
+                              <Stop color="#7d3333" offset="0.3908045977011493" />
+                              <Stop color="#286032" offset="0.5509736540664376" />
+                              <Stop color="#331872" offset="0.7241379310344827" />
+                              <Stop color="#331872" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" text="cancel">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#331872" />
+                              <Stop color="#331872" offset="0.24627720504009165" />
+                              <Stop color="#7d3333" offset="0.3908045977011493" />
+                              <Stop color="#286032" offset="0.5509736540664376" />
+                              <Stop color="#331872" offset="0.7241379310344827" />
+                              <Stop color="#331872" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXPasswordField fx:id="oldPassPassfield" labelFloat="true" layoutX="40.0" layoutY="55.0" onAction="#oldPassPassfieldAction" promptText="Enter current password" style="-fx-prompt-text-fill: darkblue; -fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944); -fx-text-fill: #8e0213;" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="newPassPassfield" labelFloat="true" layoutX="27.0" layoutY="180.0" onAction="#newPassPassfieldAction" promptText="Enter new password" style="-fx-prompt-text-fill: darkblue; -fx-text-fill: #8e0213; -fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="newPassConfPassField" labelFloat="true" layoutX="56.0" layoutY="250.0" onAction="#newPassConfPassFieldAction" promptText="Confirm new password" style="-fx-prompt-text-fill: darkblue; -fx-text-fill: #8e0213; -fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXCheckBox fx:id="checkBox" layoutX="40.0" layoutY="300.0" onAction="#checkBoxAction" text="show password" />
+            <Label fx:id="labelStatusEight" alignment="CENTER_RIGHT" layoutX="40.0" layoutY="215.0" prefHeight="17.0" prefWidth="301.0" textFill="#ed0505" />
+            <Label fx:id="labelPassMatch" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="285.0" prefHeight="17.0" prefWidth="301.0" textFill="#a30000" />
+            <JFXTextField fx:id="newUserTextfield" labelFloat="true" layoutX="40.0" layoutY="120.0" onAction="#newUserTextfieldAction" promptText="Enter new username" style="-fx-prompt-text-fill: darkblue; -fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944); -fx-text-fill: #8e0213;" unFocusColor="#671414" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label fx:id="labelStatusCurrentPassword" alignment="CENTER_RIGHT" layoutX="39.0" layoutY="86.0" prefHeight="17.0" prefWidth="301.0" textFill="#c90505" />
+            <Label fx:id="labelUsernameStatus" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="151.0" prefHeight="17.0" prefWidth="301.0" textFill="#db0404" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

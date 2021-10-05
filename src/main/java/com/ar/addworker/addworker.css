@@ -1,0 +1,52 @@
+
+.mainFxmlClass {
+
+}
+*{
+	-fx-first-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);
+	-fx-primary: linear-gradient(to bottom,#D3F1D5, #FFFFE4); 
+	-fx-primary-rev: linear-gradient(to top,#D3F1D5, #FFFFE4); 
+}
+.label{
+    -fx-text-fill: #000000;
+}
+.text-field{
+    -fx-background-color: -fx-first-color; 
+    -fx-border-color: #131313;
+    -fx-text-fill: #000000;
+    -fx-font-size:12pt;
+}
+.text-area .content{
+    -fx-background-color: -fx-first-color;
+    -fx-border-color: #131313;
+}
+.text-area{
+    -fx-text-fill: #000000;
+    -fx-font-size:12pt;
+}
+.combo-box{
+    -fx-background-color: -fx-first-color;
+    -fx-border-color: #131313;
+}
+.check-box .box{
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #131313;
+}
+.check-box:selected .box{
+    -fx-background-color: -fx-first-color;
+}
+.check-box:selected .mark{
+    -fx-background-color: green;
+}
+.button{
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 5; /* (lefttop righttop rightdown leftdown)*/
+    -fx-border-color: #191919;
+    -fx-border-radius: 5;
+}
+.button:hover{
+    -fx-background-color: -fx-primary-rev;
+    -fx-background-radius: 5; /* (lefttop righttop rightdown leftdown)*/
+}

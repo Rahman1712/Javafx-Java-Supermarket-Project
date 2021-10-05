@@ -1,0 +1,68 @@
+
+
+.mainFxmlClass {
+
+}
+*{
+	-fx-first-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);
+	-fx-first-color-rev: linear-gradient(to top,#1dbbdd44, #93f9b944);
+	-fx-primary: linear-gradient(to bottom,#D3F1D5, #FFFFE4); 
+	-fx-menu-clr: linear-gradient(to bottom,#1dbbdd44, #FFFFE4);
+}
+
+.tab-pane *.tab-header-area *.tab-header-background{
+    -fx-background-color: -fx-primary;
+    
+}
+.tab-pane{
+    -fx-tab-min-width: 120.0px;
+    -fx-tab-min-height: 30.0px;
+    -fx-tab-max-width: 120.0px;
+    -fx-tab-max-height: 30.0px;
+}
+.tab{
+    -fx-font-family:Arial;
+    -fx-font-size:18.0;
+    -fx-background-color: -fx-first-color-rev;
+}
+.tab:selected{
+    -fx-background-color: #FFFFD9;
+}
+
+.button:hover{
+    -fx-background-color: -fx-first-color-rev;
+}
+.button{
+    -fx-background-color: -fx-first-color;
+}
+.headeranchorpanecolor{  
+    -fx-background-color: -fx-primary;
+}
+																	
+.menu-item {
+    -fx-background-color: skyblue;
+}
+.menu-item:focused{
+    -fx-background-color: darkgray;
+}
+.menu-item:focused .label{
+    -fx-text-fill: blue;
+}
+.context-menu{
+    /*-fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";*/
+    -fx-background-color: black;
+    -fx-background-insets: 0.0,1.0,2.0;
+    -fx-background-radius:4.0 4.0 4.0 4.0, 0.0 6.0 6.0 6.0, 0.0 5.0 5.0 5.0, 0.0 4.0 4.0 4.0;
+    -fx-padding: 0.33333em 0.0888333em 0.666667em 0.083333em;
+}
+.menu-bar{
+    -fx-background-color: -fx-menu-clr;
+}
+.menu-bar .label{
+    -fx-font-size:12.0pt ;
+    -fx-font-family:"Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+ 

@@ -1,0 +1,29 @@
+
+
+.mainFxmlClass {
+
+}
+.text-field{
+    -fx-border-color:linear-gradient(to bottom,#34f20fbf,lightyellow, #efff087a);
+}
+
+.check-box .box{
+    -fx-background-color:linear-gradient(to bottom,#34f20fbf,lightyellow, #efff087a);
+    -fx-background-radius: 15;
+    -fx-border-color: linear-gradient(to bottom,darkblue, #efff087a,darkblue);
+    -fx-border-radius: 15;
+}
+.check-box:selected .box{
+    -fx-background-color: linear-gradient(to bottom,#34f20fbf,lightyellow, #efff087a);
+}
+
+
+.check-box:selected .mark{
+    -fx-background-color: green;
+}
+.glyph-icon-error{
+    -fx-fill:#ff2e1fc7;
+}
+.glyph-icon-norm{
+    -fx-fill:#c5b8b842;
+}

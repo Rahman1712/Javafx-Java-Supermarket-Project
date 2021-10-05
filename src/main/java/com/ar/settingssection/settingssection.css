@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.jfx-button:hover{
+    -fx-background-color:linear-gradient(to right,#03f24f59,#03f24f59 34.099616858237497%,#03ffb959 61.68582375478927%,#03ffb959 100.0%);
+}
+.jfx-button:focused{
+    -fx-background-color:linear-gradient(to right,#0070ff59,#0070ff59 13.399428578952225%,#ccff4f6b 40.61302681992334%,#bc545459 66.28352490421454%,#bc545459 100.0%);
+}

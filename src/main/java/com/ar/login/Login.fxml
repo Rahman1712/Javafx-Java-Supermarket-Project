@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchor" prefHeight="318.0" prefWidth="306.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.login.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" prefHeight="63.0" prefWidth="277.0" text="LOGIN" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2dbe5d" />
+                  <Stop color="#2dbe5d" offset="0.12005108556832696" />
+                  <Stop color="#2e81b5" offset="0.5964240102171134" />
+                  <Stop color="#2e81b5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <HBox alignment="CENTER" layoutY="260.0" prefHeight="40.0" prefWidth="306.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="loginButton" onAction="#loginButtonAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 20 15 20 15;" styleClass="login-button" text="Login">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#cancelButtonAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 20 15 20 15;" styleClass="cancel-button" text="Cancel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXTextField fx:id="userTextfield" layoutX="50.0" layoutY="81.0" onAction="#userTextfieldAction" prefHeight="25.0" prefWidth="244.0" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" unFocusColor="#800ea3" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="passTextfield" layoutX="50.0" layoutY="149.0" onAction="#passwordFieldAction" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" unFocusColor="#800ea3" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="passPassField" layoutX="50.0" layoutY="149.0" onAction="#passwordFieldAction" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44, #93f9b944);" unFocusColor="#800ea3" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXPasswordField>
+      <JFXCheckBox fx:id="checkBox" layoutX="50.0" layoutY="207.0" onAction="#checkBoxAction" text="show password" textFill="#0a11dd" />
+      <Label layoutX="248.0" layoutY="6.0" prefHeight="17.0" prefWidth="37.0" text="Admin" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#dd1397" />
+                  <Stop color="#dd1397" offset="0.12005108556832696" />
+                  <Stop color="#b1b52f" offset="0.5964240102171132" />
+                  <Stop color="#b1b52f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Circle fx:id="circleOne" layoutX="30.0" layoutY="97.0" radius="17.0" stroke="WHITE" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1fb4ffc6" />
+                  <Stop color="#5be4ff" offset="0.46104725415070236" />
+                  <Stop color="#3da3cc" offset="0.9218443470132057" />
+                  <Stop color="#3da3cc" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <FontAwesomeIconView fx:id="userIcon" fill="#750679" glyphName="USER" layoutX="21.0" layoutY="106.0" size="25" />
+      <Circle fx:id="circleTwo" layoutX="30.0" layoutY="164.0" radius="17.0" stroke="WHITE" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1fb4ffc6" />
+                  <Stop color="#5be4ff" offset="0.46104725415070236" />
+                  <Stop color="#3da3cc" offset="0.9218443470132057" />
+                  <Stop color="#3da3cc" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <FontAwesomeIconView fx:id="passIcon" fill="#750679" glyphName="LOCK" layoutX="22.0" layoutY="174.0" size="25" />
+   </children>
+</AnchorPane>

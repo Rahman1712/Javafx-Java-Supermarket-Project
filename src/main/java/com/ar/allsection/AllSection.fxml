@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="500.0" prefWidth="850.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.allsection.AllSectionController">
+    <stylesheets>
+        <URL value="@allsection.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="64.0" prefWidth="800.0" style="-fx-background-color: #FFFFE4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutX="6.0" layoutY="73.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <MenuBar layoutX="196.0" layoutY="10.0" prefHeight="27.0" prefWidth="624.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <JFXHamburger fx:id="hamburgerMenu" layoutX="757.0" layoutY="32.0" styleClass="jfx-hamburger-icon" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
+      <BorderPane layoutY="48.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <center>
+            <AnchorPane fx:id="anchorPaneContent" prefHeight="435.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <AnchorPane fx:id="anchorPaneDrawer" prefHeight="435.0" prefWidth="0.0">
+               <children>
+                  <JFXDrawer fx:id="jfxDrawerOne" defaultDrawerSize="200.0" direction="RIGHT" prefHeight="435.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

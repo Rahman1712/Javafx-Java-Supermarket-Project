@@ -1,0 +1,31 @@
+.mainFxmlClass {
+-fx-background-color:linear-gradient(to right,royalblue, #93f9b944,royalblue);
+}
+.button{
+     -fx-background-color:linear-gradient(to top,#1dbbdd44, yellow);
+     -fx-background-radius: 25 25 25 25;
+}
+.button:hover{
+    -fx-background-color:linear-gradient(to bottom,#1dbbdd44, lightgreen);
+}
+
+.labelpass{
+    -fx-text-fill:royalblue;
+}
+.labelpass:hover{
+    -fx-text-fill:derive(red,40%);
+    -fx-underline:true;
+}
+.text-field{
+    -fx-background-color:linear-gradient(to bottom,#1dbbdd44, #93f9b944);
+}
+.check-box .box{
+    -fx-background-color: royalblue;
+    -fx-background-radius: 20;
+}
+.check-box:selected .box{
+    -fx-background-color: skyblue;
+}
+.check-box:selected .mark{
+    -fx-background-color: green;
+}

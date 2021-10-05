@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchorPane" prefHeight="500.0" prefWidth="850.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.allsection.ForCompanyController">
+   <children>
+      <AnchorPane fx:id="contentAnchorPaneInborderPane" prefHeight="500.0" prefWidth="853.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXToggleButton fx:id="toggleButtonSwitch" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchModeToggleAction" prefHeight="30.0" prefWidth="195.0" style="-fx-background-color: linear-gradient(to bottom,#1dbbdd44,lightyellow,lightyellow, #93f9b944); -fx-background-radius: 90;" text="switch to popup mode" unToggleColor="#a13333" unToggleLineColor="#8b4343" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+         <toggleColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2cd253" />
+                  <Stop color="#2cd253" offset="0.29118773946360144" />
+                  <Stop color="#2585c0" offset="0.713920817369093" />
+                  <Stop color="#2585c0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </toggleColor>
+         <toggleLineColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c278b2" />
+                  <Stop color="#c94a74" offset="0.6321839080459769" />
+                  <Stop color="#c94a74" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </toggleLineColor>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f00f00" />
+                  <Stop color="#ff6500" offset="0.2120051085568325" />
+                  <Stop color="#ff0058" offset="0.8007662835249041" />
+                  <Stop color="#ff0042" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </JFXToggleButton>
+   </children>
+</AnchorPane>

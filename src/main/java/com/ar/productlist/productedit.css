@@ -1,0 +1,13 @@
+
+
+.mainFxmlClass {
+-fx-background-color: linear-gradient(to bottom,derive(#FFFFD9,15%), #93f9b944,derive(#FFFFD9,15%));
+}
+
+.button{
+	-fx-background-color: linear-gradient(to bottom,#D3F1D5, #FFFFE4);
+	-fx-border-color: #131313;
+}
+.button:hover{
+	-fx-background-color: linear-gradient(to top,#D3F1D5, #FFFFE4);
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="750.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.saleslist.SalesListController">
+    <stylesheets>
+        <URL value="@saleslist.css" />
+    </stylesheets>
+    <children>
+      <AnchorPane fx:id="secAnchorPane" layoutX="37.0" layoutY="43.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #FFFFD9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.29797979797979796" layoutX="163.0" layoutY="130.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="firstAnchorPaneInSplit" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="250.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <VBox layoutX="-1.0" layoutY="99.0" prefHeight="398.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="105.0">
+                           <children>
+                              <JFXButton fx:id="allButton" onAction="#allButtonAction" prefHeight="48.0" prefWidth="220.0" text="ALL">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.1492063249860491">
+                                       <stops>
+                                          <Stop color="#011b1d" />
+                                          <Stop color="#011b1d" offset="0.12260536398467428" />
+                                          <Stop color="#1e44c0" offset="0.4559386973180071" />
+                                          <Stop color="#011719" offset="0.8109833971902936" />
+                                          <Stop color="#011719" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </JFXButton>
+                              <HBox alignment="TOP_RIGHT" />
+                              <AnchorPane fx:id="anchorPaneSearching" prefHeight="137.0" prefWidth="220.0" styleClass="anchorpanesort">
+                                 <children>
+                                    <Label layoutX="63.0" prefHeight="17.0" prefWidth="89.0" text="SEARCH SALES" textFill="#0d520a" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <MenuButton layoutX="4.0" layoutY="21.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="110.0" style="-fx-background-radius: 50; -fx-border-color: royalblue; -fx-border-radius: 50; -fx-background-color: transparent;" text="SEARCH BY" textFill="#131313">
+                                      <items>
+                                          <RadioMenuItem fx:id="radioMenuItemDefault" mnemonicParsing="false" onAction="#radioMenuItemDefaultAction" text="default" />
+                                          <RadioMenuItem fx:id="radioMenuCustomerName" mnemonicParsing="false" onAction="#radioMenuCustomerNameAction" text="customer name" />
+                                          <RadioMenuItem fx:id="radioMenuInvoiceNo" mnemonicParsing="false" onAction="#radioMenuInvoiceNoAction" text="invoice no." />
+                                          <RadioMenuItem fx:id="radioMenuCustomerId" mnemonicParsing="false" onAction="#radioMenuCustomerIdAction" text="customer id" />
+                                          <RadioMenuItem fx:id="radioMenuBiller" mnemonicParsing="false" onAction="#radioMenuBillerAction" text="biller" />
+                                      </items>
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="FILTER" size="15" styleClass="glyph-icon-filter" />
+                                       </graphic>
+                                    </MenuButton>
+                                    <Label fx:id="labelRadioStatus" layoutX="6.0" layoutY="58.0" prefHeight="25.0" prefWidth="205.0" text="search in all field" textFill="#131313" />
+                                    <TextField fx:id="textfieldSearch" layoutX="9.0" layoutY="91.0" prefHeight="32.0" prefWidth="196.0" promptText="search " style="-fx-background-color: transparent; -fx-text-fill: darkblue; -fx-border-color: #131313;">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <JFXButton fx:id="buttonForHideSort" contentDisplay="RIGHT" layoutX="117.0" layoutY="22.0" mnemonicParsing="false" onAction="#buttonHideSortAction" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: royalblue; -fx-background-color: transparent;" text="SORT ">
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="SORT" size="20" styleClass="glyph-icon-sorthide" />
+                                       </graphic>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#57d9cf" />
+                                                <Stop color="#57d9cf" offset="0.007662835249042145" />
+                                                <Stop color="#57d9cf" offset="0.25031928480204346" />
+                                                <Stop color="#3be2eb" offset="0.44274598096140927" />
+                                                <Stop color="#8ad1b8" offset="0.6347381864623242" />
+                                                <Stop color="#8ad1b8" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </JFXButton>
+                                    <JFXButton fx:id="buttonForShowSort" contentDisplay="RIGHT" layoutX="117.0" layoutY="22.0" mnemonicParsing="false" onAction="#buttonSortShowAction" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 50; -fx-background-color: transparent; -fx-border-radius: 50; -fx-border-color: royalblue;" text="SORT " textFill="#131313">
+                                       <graphic>
+                                          <FontAwesomeIconView glyphName="SORT" size="20" styleClass="glyph-icon-sortshow" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anchorPaneSorting" prefHeight="264.0" prefWidth="220.0" styleClass="anchorpanesort">
+                                 <children>
+                                    <RadioButton fx:id="radioChooseTwoDates" layoutX="14.0" layoutY="92.0" mnemonicParsing="false" onAction="#radioChooseTwoDatesAction" text="between two dates" textFill="#131313" />
+                                    <RadioButton fx:id="radioChooseOneDate" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#radioChooseOneDateAction" text="choose a date" textFill="#131313" />
+                                    <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="74.0" text="SORTING" textFill="#0d520a" underline="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></Label>
+                                    <JFXDatePicker fx:id="datePickerOnly" defaultColor="BLACK" layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="110.0" />
+                                    <JFXDatePicker fx:id="fromDatePicker" defaultColor="BLACK" layoutX="7.0" layoutY="130.0" prefHeight="25.0" prefWidth="100.0" />
+                                    <JFXTimePicker fx:id="fromTimePicker" defaultColor="BLACK" layoutX="120.0" layoutY="130.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="10.0" layoutY="116.0" prefHeight="17.0" prefWidth="74.0" text="From:" textFill="#075122" />
+                                    <JFXDatePicker fx:id="toDatePicker" defaultColor="BLACK" layoutX="7.0" layoutY="192.0" prefHeight="25.0" prefWidth="100.0" />
+                                    <JFXTimePicker fx:id="toTimePicker" defaultColor="BLACK" layoutX="120.0" layoutY="192.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="11.0" layoutY="177.0" prefHeight="17.0" prefWidth="74.0" text="To:" textFill="#941934" />
+                                    <Separator layoutX="-3.0" layoutY="85.0" prefWidth="200.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" />
+                                    <JFXButton fx:id="okButtonSorting" layoutX="118.0" layoutY="232.0" onAction="#okButtonSortingAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: linear-gradient(to bottom,#D3F1D5, #FFFFE4); -fx-border-color: #191919;" text="OK">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              
+                           </children>
+                        </VBox>
+                        <AnchorPane layoutX="46.0" layoutY="-126.0" prefHeight="100.0" prefWidth="113.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="49.0" layoutY="14.0" prefHeight="25.0" prefWidth="122.0" text="SALES DETAILS" textAlignment="JUSTIFY" textFill="#02081b" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <Separator layoutX="3.0" layoutY="104.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="secondAnchorPaneInSplit" minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="534.0" styleClass="firstandsecondanchorpane">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="432.0" prefWidth="487.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BorderPane layoutX="60.0" layoutY="46.0" prefHeight="428.0" prefWidth="487.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="tableViewSales" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                          <TableColumn fx:id="colInvoiceId" prefWidth="75.0" text="INVOICE NO." />
+                                          <TableColumn fx:id="colCustomerId" prefWidth="75.0" text="CUSTOMER ID" />
+                                          <TableColumn fx:id="colCustomerName" prefWidth="75.0" text="CUSTOMER NAME" />
+                                          <TableColumn fx:id="colSalesTotal" prefWidth="75.0" text="SALES TOTAL" />
+                                        <TableColumn fx:id="colNoOfItems" prefWidth="79.29339599609375" text="NO. OF ITEMS PURCHASED" />
+                                          <TableColumn fx:id="colBillPaid" prefWidth="75.0" text="BILL PAID" />
+                                          <TableColumn fx:id="colBalance" prefWidth="75.0" text="BALANCE" />
+                                          <TableColumn fx:id="colBiller" prefWidth="75.0" text="BILLER" />
+                                          <TableColumn fx:id="colSalesTime" prefWidth="75.0" text="SALES TIME" />
+                                          <TableColumn fx:id="colSalesTimeTimeStamp" prefWidth="75.0" text="SALES TIME" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </center>
+                                 <top>
+                                    <AnchorPane prefHeight="51.0" prefWidth="487.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton layoutX="503.0" layoutY="12.0" onAction="#refreshButtonAction" prefHeight="25.0" prefWidth="34.0" style="-fx-background-radius: 30; -fx-background-color: linear-gradient(to right,#1dbbdd44, #93f9b944); -fx-border-radius: 30;" text="" AnchorPane.rightAnchor="10.0">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#105722" glyphName="REFRESH" size="25" />
+                                             </graphic></JFXButton>
+                                       </children></AnchorPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

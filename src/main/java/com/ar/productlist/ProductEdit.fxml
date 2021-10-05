@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="368.0" prefWidth="421.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ar.productlist.ProductEditController">
+    <stylesheets>
+        <URL value="@productedit.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="14.0" layoutY="56.0">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="250.0" style="-fx-border-color: grey;">
+               <children>
+                  <JFXTextField fx:id="barcodeText" focusColor="#260aff" labelFloat="true" onAction="#barcodeAction" prefHeight="25.0" prefWidth="230.0" promptText="Barcode" unFocusColor="#ff01bb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <VBox prefHeight="38.0" prefWidth="17.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <JFXButton fx:id="closeBarIcon" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#closeBarIconAction" prefHeight="15.0" prefWidth="15.0" text="">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#672121" glyphName="CLOSE" size="15" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="editBarIcon" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#editBarIconAction" prefHeight="15.0" prefWidth="15.0" text="">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#672121" glyphName="EDIT" size="15" wrappingWidth="12.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: grey;">
+               <children>
+                  <JFXTextField fx:id="nameText" focusColor="#260aff" labelFloat="true" onAction="#pnameAction" prefHeight="25.0" prefWidth="231.0" promptText="Product Name" unFocusColor="#ff01bb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <VBox prefHeight="38.0" prefWidth="17.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <JFXButton fx:id="closeNamIcon" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#closeNamIconAction" prefHeight="15.0" prefWidth="15.0" text="">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#672121" glyphName="CLOSE" size="15" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="editNamIcon" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#editNamIconAction" prefHeight="15.0" prefWidth="15.0" text="">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#672121" glyphName="EDIT" size="15" wrappingWidth="12.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: grey;">
+               <children>
+                  <JFXTextField fx:id="quantityText" focusColor="#260aff" labelFloat="true" onAction="#quantityAction" prefHeight="25.0" prefWidth="254.0" promptText="Quantity" unFocusColor="#ff01bb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: grey;">
+               <children>
+                  <JFXTextField fx:id="mrpText" focusColor="#260aff" labelFloat="true" onAction="#mrpAction" prefHeight="25.0" prefWidth="272.0" promptText="M.R.P" unFocusColor="#ff01bb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: grey;">
+               <children>
+                  <JFXTextField fx:id="discountText" focusColor="#260aff" labelFloat="true" onAction="#discountAction" prefHeight="25.0" prefWidth="263.0" promptText="Discount (in %)" unFocusColor="#ff01bb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="250.0" style="-fx-border-color: grey;">
+               <children>
+                  <JFXTextField fx:id="priceText" focusColor="#260aff" labelFloat="true" onAction="#priceAction" prefHeight="25.0" prefWidth="213.0" promptText="Price" unFocusColor="#ff01bb">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXTextField>
+                  <VBox>
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <JFXButton fx:id="refreshButton" layoutY="22.0" onAction="#refreshButtonAction" prefHeight="20.0" prefWidth="20.0" text="">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#0d8444" glyphName="REFRESH" size="18" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="closePriceIcon" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#closePriceIconAction" prefHeight="15.0" prefWidth="15.0" text="" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#672121" glyphName="CLOSE" size="15" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="editPriceIcon" contentDisplay="CENTER" layoutX="12.0" layoutY="7.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#editPriceIconAction" onMouseEntered="#editPriceIconMouseEnteredAction" onMouseExited="#editPriceIconMouseExitedAction" prefHeight="15.0" prefWidth="15.0" text="" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#672121" glyphName="EDIT" size="15" wrappingWidth="12.0" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="271.0" layoutY="56.0" prefHeight="150.0" prefWidth="140.0" style="-fx-background-color: grey;">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelHeading" alignment="CENTER" layoutX="113.0" layoutY="14.0" text="PRODUCT EDIT" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="276.0" layoutY="225.0">
+         <children>
+            <JFXButton fx:id="saveButton" onAction="#saveButtonAction" prefHeight="40.0" prefWidth="130.0" ripplerFill="#00ff77" text="SAVE">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="130.0" ripplerFill="RED" text="CANCEL">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Line endX="-60.0" layoutX="323.0" layoutY="346.0" startX="-308.0" startY="-1.0" stroke="GREY" strokeWidth="2.5" />
+   </children>
+</AnchorPane>
